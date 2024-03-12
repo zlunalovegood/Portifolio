@@ -1,0 +1,104 @@
+
+/* Container global */
+.container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100%; /* Altura igual a 100% da altura do elemento pai (normalmente viewport) */
+    width: 100%; /* Largura igual a 100% da largura do elemento pai */
+    display: flex; /* Usar flexbox para organizar elementos internos */
+    flex-direction: column; /* Organizar elementos internos em uma coluna */
+    justify-content: space-evenly; /* Distribuir espaço uniformemente entre elementos internos */
+    margin: 3rem 0; /* Margem de 3 rem (unidade de medida) na parte superior e inferior, 0 nas laterais */
+    align-items: center; /* Alinhar elementos internos horizontalmente no centro */
+}
+
+/* Estilo dos cartões */
+.card-container {
+    display: flex; /* Usar flexbox para organizar os cartões */
+    justify-content: space-evenly; /* Distribuir espaço uniformemente entre os cartões */
+    align-items: center; /* Alinhar os cartões horizontalmente no centro */
+    width: 90%; /* Largura de 90% em relação ao elemento pai */
+}
+
+.card {
+    width: 300px; /* Largura fixa de 300 pixels para os cartões */
+    height: 300px; /* Altura fixa de 300 pixels para os cartões */
+    border-radius: 50%; /* Usar borda circular (círculo) */
+    margin: 3rem 0; /* Margem de 3 rem (unidade de medida) na parte superior e inferior, 0 nas laterais */
+    display: flex; /* Usar flexbox para organizar elementos internos */
+    align-items: center; /* Alinhar elementos internos verticalmente no centro */
+    justify-content: center; /* Alinhar elementos internos horizontalmente no centro */
+    background-color: #fdfdfd; /* Cor de fundo dos cartões */
+    background-image: url('circulo\ \(2\).png'); /* Imagem de fundo dos cartões */
+    background-position: center; /* Centralizar a imagem de fundo horizontalmente */
+    background-size: cover; /* Cobrir todo o espaço com a imagem de fundo */
+    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
+    filter: grayscale(0.5); /* Aplicar filtro de escala de cinza com 50% de intensidade */
+    color: #1E1E2A; /* Cor do texto dentro dos cartões */
+    cursor: pointer; /* Cursor ao passar sobre os cartões */
+    transition: 0.5s ease-in-out; /* Transição suave ao interagir com os cartões */
+    text-align: auto; /* Alinhamento automático do texto */
+}
+
+.card-text {
+    width: 80%; /* Largura de 80% em relação ao elemento pai para o texto */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    color: #000; /* Cor do texto */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+/* Estilo do texto dentro do círculo */
+.card-wrapper {
+    text-align: center; /* Centralizar o texto horizontalmente */
+    display: flex; /* Usar flexbox para organizar elementos internos */
+    flex-direction: column; /* Organizar elementos internos em uma coluna */
+    justify-content: center; /* Alinhar elementos internos verticalmente no centro */
+    align-items: center; /* Alinhar elementos internos horizontalmente no centro */
+    position: relative; /* Posição relativa para elementos filhos posicionados relativamente a este */
+}
+
+/* Borda de animação */
+.card-wrapper::before {
+    content: ''; /* Conteúdo gerado para a borda */
+    position: absolute; /* Posição absoluta em relação ao elemento pai */
+    height: 1px; /* Altura da borda de 1 pixel */
+    width: 100px; /* Largura da borda de 100 pixels */
+    border-radius: 50%; /* Usar borda circular (círculo) */
+    display: block; /* Exibir como bloco */
+    border: 1px solid #000; /* Cor da borda preta */
+    opacity: 0; /* Opacidade inicial 0 (invisível) */
+    transition: 0.5s ease-in-out; /* Transição suave ao interagir com a borda */
+}
+
+.card-wrapper h2 
+{
+    font-size: 25px; /* Tamanho da fonte para o título */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    margin: 0; /* Margem zero */
+    transition: 0.5s ease-in-out; /* Transição suave ao interagir com o título */
+}
+
+.card-wrapper p {
+    font-size: 14px; /* Tamanho da fonte para o parágrafo */
+    visibility: hidden; /* Inicialmente ocultar o parágrafo */
+    opacity: 0; /* Opacidade inicial 0 (invisível) */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    transition: 0.5s ease-in-out; /* Transição suave ao interagir com o parágrafo */
+}
+
+.card:hover {
+    filter: unset; /* Remover o filtro ao passar o mouse sobre os cartões */
+}
+
+.card:hover > .card-wrapper::before {
+    height: 200px; /* Altura da borda aumenta ao passar o mouse */
+    width: 200px; /* Largura da borda aumenta ao passar o mouse */
+    opacity: 1; /* Opacidade da borda aumenta ao passar o mouse */
+}
+
+.card:hover > .card-wrapper p {
+    opacity: 1; /* Tornar o parágrafo visível ao passar o mouse */
+    visibility: visible; /* Tornar o parágrafo visível ao passar o mouse */
+    font-size: 14px; /* Tamanho da fonte do parágrafo ao passar o mouse */
+}

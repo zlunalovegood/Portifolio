@@ -1,0 +1,52 @@
+/* Estilo do formulário de contato */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: #FFF; /* Adicione uma cor de fundo branca */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicione uma sombra suave */
+}
+
+.form-group label {
+    display: block;
+    color: #FF69B4; /* Cor rosa mais escura para os rótulos */
+    font-weight: bold; /* Texto em negrito */
+    margin-bottom: 10px; /* Aumente a margem inferior para separar os rótulos */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #FF69B4;
+    border-radius: 5px;
+    background-color: #FFF; /* Adicione uma cor de fundo branca */
+    transition: border-color 0.3s ease; /* Adicione uma transição suave para a cor da borda */
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #FF69B4;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px; /* Aumente o padding vertical para um botão mais alto */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #FF1493;
+}
+
+/* Adicione uma animação de foco para destacar os campos de entrada quando o usuário interagir com eles */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #FF1493; /* Cor da borda destacada */
+}

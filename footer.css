@@ -1,0 +1,19 @@
+/* Estilo do footer */
+.footer {
+    font-family: 'Dancing Script', cursive;
+    width: 100%;
+    background-color: #FF69B4; /* Cor de fundo rosa mais escura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Cor do texto branco */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    padding: 20px 0; /* Adicione espaço interno superior e inferior para torná-lo mais espaçoso */
+}
+
+/* Adicione um efeito de transição suave quando o usuário passa o mouse sobre o footer */
+.footer:hover {
+    background-color: #ff0088; /* Cor de fundo rosa mais escura quando hover */
+    cursor: pointer;
+}

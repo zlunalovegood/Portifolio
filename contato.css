@@ -1,0 +1,61 @@
+link
+
+/* Estilo das seções */
+
+section {
+    padding: 60px; /* Espaçamento interno de 60 pixels em todas as direções */
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    min-height: 100%; /* Define a altura mínima da seção como 100% da altura da viewport */
+    display: flex; /* Usa flexbox para alinhar os elementos internos */
+    flex-direction: column; /* Coloca os elementos internos em uma coluna */
+    justify-content: center; /* Centraliza verticalmente os elementos internos */
+    align-items: center; /* Centraliza horizontalmente os elementos internos */
+}
+
+
+section h1, section h2 {
+    color: #fff; /* Texto branco para os títulos das seções */
+    margin: 0 0 20px 0; /* Margem decorativa (espaço abaixo do título) */
+    border: 2px solid #fff; /* Borda branca decorativa em torno do título */
+    padding: 10px; /* Espaçamento interno para a borda decorativa */
+    background-color: #FFC0CB; /* Cor de fundo rosa claro para os títulos */
+}
+
+/* Estilo do formulário de contato */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #FFC0CB; /* Texto rosa claro para os rótulos */
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #FFC0CB; /* Borda rosa clara para os campos de entrada */
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="submit"] {
+    background-color: #FF69B4; /* Cor de fundo rosa mais escura para o botão de envio */
+    color: #000; /* Texto branco para o botão de envio */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color #FF69B4 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #FF1493; /* Cor de fundo rosa mais escura quando hover */
+}

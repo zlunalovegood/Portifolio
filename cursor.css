@@ -1,0 +1,11 @@
+
+/*ao entra na pagina do site o cursor altera para o tema escolhido*/
+
+body {
+    cursor: url('ponteiro.png'), auto;
+}
+.card {
+    /* ... outros estilos ... */
+    cursor: url('maozinha.png'), pointer;
+    /* ... outros estilos ... */
+}
